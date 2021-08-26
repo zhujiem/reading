@@ -1,0 +1,24 @@
+{
+  "data": [
+    {"timestamp": "2021-08-26 14:28",
+     "paper": "Embarrassingly Shallow Autoencoders for Sparse Data",
+     "url": "https://arxiv.org/abs/1905.03375",
+     "pub": "WWW'19",
+     "tags": ["CF"],
+     "note": "本文EASE^R是基于AutoEncoder来做implicit CF问题的，不同之处在于本文只有一层linear hidden layer (shallow)，即用邻居节点来reconstruct当前节点，最小化|X - XB|，B为待学习的I-I关系矩阵，并且diagnoal为0（不存在自环）。在使用MSE loss和L2正则情况下，该方法存在解析解，只需要计算共现矩阵X^TX及其逆矩阵就能得到最终解。"
+    },
+    {"timestamp": "2021-08-26 14:32",
+     "paper": "Embedding-based Retrieval in Facebook Search",
+     "url": "https://arxiv.org/abs/2006.11632",
+     "pub": "KDD'20",
+     "tags": ["matching"],
+     "company": "Facebook",
+     "note": "本文介绍了Facebook的语义检索模型的工程实践经验，包括：1) 随机负采样比曝光未点击样本好 2) 采用triplet loss 3) ANN引擎加入了条件binary matching的过滤 4) retrieval阶段变了，ranking阶段也要跟着优化，考虑加入embedding做特征(query-doc的cosine效果好)和利用人工标注数据finetune embeddings 5) Online hard mining有效(选取相似度最大的negative)；100:1的easy:hard mixing效果最好 6) 双阶段retrieval效果也有提升"
+    }
+  ]
+}
+
+
+
+
+
